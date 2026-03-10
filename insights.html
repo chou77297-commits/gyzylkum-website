@@ -131,27 +131,108 @@
         </div>
     </section>
 
-    <!-- ======== FEATURED ARTICLE ======== -->
-    <section id="articles" class="py-16 bg-white">
+        <!-- ======== FEATURED ARTICLE - REDESIGNED ======== -->
+    <section id="articles" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300" data-aos="fade-up">
-                <div class="grid grid-cols-1 lg:grid-cols-2">
-                    <div class="p-8 lg:p-12 flex flex-col justify-center">
-                        <span class="text-blue-600 font-semibold text-sm tracking-wider uppercase mb-3">Featured Article</span>
-                        <h2 class="text-3xl lg:text-4xl font-bold mb-4">The Future of Cross-Border Trade in 2026</h2>
-                        <p class="text-gray-600 mb-6 text-lg">New regulations, digital transformation, and emerging markets are reshaping global trade. Our experts break down what you need to know to stay competitive.</p>
-                        <div class="flex items-center gap-4">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author" class="w-12 h-12 rounded-full border-2 border-white shadow-md">
-                            <div>
-                                <p class="font-semibold">Sarah Chen</p>
-                                <p class="text-sm text-gray-500">Head of Trade Services • 5 min read</p>
-                            </div>
+            <!-- Section header -->
+            <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+                <span class="text-blue-600 font-semibold text-sm tracking-wider uppercase">Editor's Pick</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">Featured <span class="gradient-text">Article</span></h2>
+                <p class="text-xl text-gray-600">Our latest insights on the most pressing topics in global business.</p>
+            </div>
+            
+            <!-- Featured article card -->
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 hover:shadow-3xl transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+                    <!-- Image section - left side on desktop -->
+                    <div class="lg:col-span-5 relative h-80 lg:h-auto overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                             alt="Global Trade" 
+                             class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent"></div>
+                        
+                        <!-- Category badge -->
+                        <div class="absolute top-6 left-6">
+                            <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">Trade & Economics</span>
+                        </div>
+                        
+                        <!-- Reading time badge -->
+                        <div class="absolute bottom-6 left-6 lg:hidden">
+                            <span class="bg-black/70 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                                <i class="far fa-clock"></i>
+                                <span>5 min read</span>
+                            </span>
                         </div>
                     </div>
-                    <div class="h-64 lg:h-auto">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Global Trade" 
-                             class="w-full h-full object-cover">
+                    
+                    <!-- Content section - right side on desktop -->
+                    <div class="lg:col-span-7 p-8 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-white to-gray-50">
+                        <!-- Author info -->
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" 
+                                 alt="Sarah Chen" 
+                                 class="w-14 h-14 rounded-full border-2 border-blue-100 shadow-md">
+                            <div>
+                                <p class="font-semibold text-lg">Sarah Chen</p>
+                                <div class="flex items-center gap-2 text-sm text-gray-500">
+                                    <span>Head of Trade Services</span>
+                                    <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
+                                    <span class="flex items-center gap-1">
+                                        <i class="far fa-clock"></i>
+                                        5 min read
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Article title -->
+                        <h3 class="text-3xl lg:text-4xl font-bold mb-4 leading-tight">
+                            The Future of Cross-Border Trade in 2026
+                        </h3>
+                        
+                        <!-- Article description -->
+                        <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                            New regulations, digital transformation, and emerging markets are reshaping global trade. Our experts break down what you need to know to stay competitive in an increasingly complex international landscape.
+                        </p>
+                        
+                        <!-- Key takeaways -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Market Trends</p>
+                                    <p class="font-semibold">2026 Outlook</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                                    <i class="fas fa-file-contract"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Regulations</p>
+                                    <p class="font-semibold">New Policies</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Markets</p>
+                                    <p class="font-semibold">APAC Focus</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Read more link (subtle) -->
+                        <div class="border-t border-gray-200 pt-6 mt-2">
+                            <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors group">
+                                <span>Read full article</span>
+                                <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
