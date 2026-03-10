@@ -26,19 +26,18 @@
             transform: translateY(-10px);
             box-shadow: 0 30px 40px -15px rgba(0, 0, 0, 0.2);
         }
-        .service-icon {
-            transition: all 0.3s ease;
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .service-card:hover .service-icon {
-            transform: scale(1.1) rotate(5deg);
-            background-color: #2563eb;
-            color: white;
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
     </style>
 </head>
 <body class="bg-white text-gray-800 antialiased">
 
-    <!-- ======== NAVIGATION (same as about) ======== -->
+    <!-- ======== NAVIGATION ======== -->
     <nav class="bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -46,6 +45,7 @@
                     <span class="gradient-text">GYZYL KUM</span>
                     <span class="text-gray-600"> LLC</span>
                 </a>
+                
                 <div class="hidden md:flex items-center space-x-1">
                     <a href="index.html" class="px-4 py-2 text-gray-600 hover:text-blue-600 transition font-medium">Home</a>
                     <a href="about.html" class="px-4 py-2 text-gray-600 hover:text-blue-600 transition font-medium">About</a>
@@ -53,9 +53,13 @@
                     <a href="insights.html" class="px-4 py-2 text-gray-600 hover:text-blue-600 transition font-medium">Insights</a>
                     <a href="contact.html" class="px-4 py-2 text-gray-600 hover:text-blue-600 transition font-medium">Contact</a>
                 </div>
+
                 <div class="hidden md:block">
-                    <a href="contact.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition shadow-md">Get Consultation</a>
+                    <a href="contact.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition shadow-md">
+                        Get Consultation
+                    </a>
                 </div>
+
                 <div class="md:hidden">
                     <button id="menu-btn" class="text-gray-500 hover:text-blue-600">
                         <i class="fas fa-bars text-2xl"></i>
@@ -63,6 +67,7 @@
                 </div>
             </div>
         </div>
+
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
             <div class="px-4 py-3 space-y-2">
                 <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-600">Home</a>
@@ -77,36 +82,36 @@
         </div>
     </nav>
 
-<!-- ======== PAGE HERO - REDESIGNED ======== -->
-<section class="relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white overflow-hidden">
-    <div class="absolute inset-0 opacity-10">
-        <i class="fas fa-cogs text-9xl absolute top-10 right-10 rotate-12"></i>
-        <i class="fas fa-chart-line text-8xl absolute bottom-10 left-10"></i>
-    </div>
-    
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <!-- 面包屑导航 -->
-        <div class="flex items-center gap-3 text-base mb-8 bg-white/10 backdrop-blur-sm px-5 py-3 rounded-full inline-flex border border-white/20 shadow-lg" data-aos="fade-up">
-            <a href="index.html" class="flex items-center gap-2 text-white hover:text-yellow-300 transition group">
-                <i class="fas fa-home text-sm"></i>
-                <span class="font-medium">Home</span>
-            </a>
-            <i class="fas fa-chevron-right text-white/50 text-sm"></i>
-            <span class="text-yellow-300 font-semibold">Services</span>
+    <!-- ======== HERO SECTION ======== -->
+    <section class="relative min-h-[500px] flex items-center justify-center overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-600">
+        <!-- Background pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <i class="fas fa-cogs text-9xl absolute top-10 right-10 rotate-12"></i>
+            <i class="fas fa-chart-line text-8xl absolute bottom-10 left-10"></i>
         </div>
         
-        <div class="max-w-3xl" data-aos="fade-up" data-aos-delay="100">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">Our <span class="text-yellow-300">Services</span></h1>
-            <p class="text-xl text-blue-100 leading-relaxed mb-10">Comprehensive solutions tailored to your business needs, delivered by industry experts.</p>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+            <!-- Breadcrumb -->
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-8 border border-white/20" data-aos="fade-down">
+                <a href="index.html" class="text-white hover:text-yellow-300 transition flex items-center gap-1">
+                    <i class="fas fa-home text-xs"></i>
+                    <span>Home</span>
+                </a>
+                <i class="fas fa-chevron-right text-white/50 text-xs"></i>
+                <span class="text-yellow-300">Services</span>
+            </div>
             
-            <!-- 返回按钮 -->
-            <a href="index.html" class="inline-flex items-center gap-3 bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-yellow-300 hover:text-blue-800 transition-all duration-300 shadow-xl group">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6" data-aos="fade-up">Our <span class="text-yellow-300">Services</span></h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="100">
+                Comprehensive solutions tailored to your business needs, delivered by industry experts.
+            </p>
+            
+            <a href="index.html" class="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-yellow-300 hover:text-blue-800 transition-all duration-300 group shadow-lg" data-aos="fade-up" data-aos-delay="200">
                 <i class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
-                <span>Back to Homepage</span>
+                <span>Back to Home</span>
             </a>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- ======== SERVICES OVERVIEW ======== -->
     <section class="py-24 bg-white">
@@ -118,7 +123,7 @@
             
             <!-- Service Navigation -->
             <div class="flex flex-wrap justify-center gap-4 mb-16" data-aos="fade-up">
-                <a href="#tech" class="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition">Technology Consulting</a>
+                <a href="#tech" class="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition shadow-md">Technology Consulting</a>
                 <a href="#trade" class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition">Cross-Border Trade</a>
                 <a href="#security" class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition">Cybersecurity</a>
             </div>
@@ -167,7 +172,7 @@
                     <div class="relative" data-aos="fade-left">
                         <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Technology Consulting" 
-                             class="rounded-2xl shadow-2xl">
+                             class="rounded-2xl shadow-2xl w-full hover-lift">
                         <div class="absolute -bottom-4 -right-4 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
                             <p class="text-2xl font-bold">10+</p>
                             <p class="text-sm">Years Experience</p>
@@ -182,7 +187,7 @@
                     <div class="relative order-2 lg:order-1" data-aos="fade-right">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Cross-Border Trade" 
-                             class="rounded-2xl shadow-2xl">
+                             class="rounded-2xl shadow-2xl w-full hover-lift">
                         <div class="absolute -bottom-4 -left-4 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
                             <p class="text-2xl font-bold">20+</p>
                             <p class="text-sm">Countries</p>
@@ -273,7 +278,7 @@
                     <div class="relative" data-aos="fade-left">
                         <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Cybersecurity" 
-                             class="rounded-2xl shadow-2xl">
+                             class="rounded-2xl shadow-2xl w-full hover-lift">
                         <div class="absolute -bottom-4 -right-4 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
                             <p class="text-2xl font-bold">ISO</p>
                             <p class="text-sm">27001 Certified</p>
@@ -294,28 +299,28 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-3xl mx-auto mb-4">
                         <i class="fas fa-brain"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Deep Expertise</h3>
                     <p class="text-gray-600">Specialized knowledge across technology, trade, and security</p>
                 </div>
-                <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-3xl mx-auto mb-4">
                         <i class="fas fa-handshake"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Client-First</h3>
                     <p class="text-gray-600">Tailored solutions that prioritize your unique needs</p>
                 </div>
-                <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
                     <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-3xl mx-auto mb-4">
                         <i class="fas fa-globe-americas"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Global Network</h3>
                     <p class="text-gray-600">Partners and resources spanning 20+ countries</p>
                 </div>
-                <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition hover:-translate-y-1" data-aos="fade-up" data-aos-delay="400">
                     <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-3xl mx-auto mb-4">
                         <i class="fas fa-clock"></i>
                     </div>
@@ -326,86 +331,72 @@
         </div>
     </section>
 
-<!-- ======== CTA SECTION - FORCED BLACK ======== -->
-<section style="background-color: #000000 !important; background: #000000 !important;" class="py-20 text-white">
-    <div style="background-color: #000000 !important;" class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6" style="color: white !important;">Ready to Transform Your Business?</h2>
-        <p class="text-xl mb-10 max-w-2xl mx-auto" style="color: #d1d5db !important;">Let's discuss how GYZYL KUM can help you achieve your global ambitions.</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="contact.html" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition shadow-lg" style="background-color: #2563eb !important; color: white !important;">
-                Schedule Free Consultation
+    <!-- ======== CTA SECTION - BLACK BACKGROUND ======== -->
+    <section style="background-color: #000000 !important;" class="py-20 text-white">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+            <h2 style="color: white !important;" class="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
+            <p style="color: #d1d5db !important;" class="text-xl mb-10">Let's discuss which of our services can best support your business goals.</p>
+            <a href="contact.html" style="background-color: #2563eb !important; color: white !important;" class="inline-block px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition shadow-lg">
+                Schedule Consultation
             </a>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ======== FOOTER - FORCED BLACK ======== -->
-<footer style="background-color: #000000 !important; background: #000000 !important;" class="text-white border-t border-gray-800">
-    <div style="background-color: #000000 !important;" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
-            <!-- Company info -->
-            <div class="lg:col-span-2">
-                <a href="index.html" class="text-2xl font-bold text-white mb-4 inline-block hover:text-blue-400 transition" style="color: white !important;">GYZYL KUM LLC</a>
-                <p class="text-gray-300 mb-6 max-w-md" style="color: #d1d5db !important;">Connecting global resources, empowering innovation through expert consulting and solutions.</p>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-300 hover:text-white transition transform hover:scale-110" style="color: #d1d5db !important;"><i class="fab fa-linkedin-in text-xl"></i></a>
-                    <a href="#" class="text-gray-300 hover:text-white transition transform hover:scale-110" style="color: #d1d5db !important;"><i class="fab fa-twitter text-xl"></i></a>
-                    <a href="#" class="text-gray-300 hover:text-white transition transform hover:scale-110" style="color: #d1d5db !important;"><i class="fab fa-facebook-f text-xl"></i></a>
+    <!-- ======== FOOTER - BLACK BACKGROUND ======== -->
+    <footer style="background-color: #000000 !important;" class="text-white border-t border-gray-800">
+        <div style="background-color: #000000 !important;" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" style="color: white !important;" class="text-2xl font-bold mb-4 inline-block hover:text-blue-400 transition">GYZYL KUM LLC</a>
+                    <p style="color: #9ca3af !important;" class="mb-6">Connecting global resources, empowering innovation through expert consulting and solutions.</p>
+                </div>
+                <div>
+                    <h4 style="color: white !important;" class="font-semibold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#tech" style="color: #9ca3af !important;" class="hover:text-white transition">Technology Consulting</a></li>
+                        <li><a href="services.html#trade" style="color: #9ca3af !important;" class="hover:text-white transition">Cross-Border Trade</a></li>
+                        <li><a href="services.html#security" style="color: #9ca3af !important;" class="hover:text-white transition">Cybersecurity</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white !important;" class="font-semibold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" style="color: #9ca3af !important;" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="services.html" style="color: #9ca3af !important;" class="hover:text-white transition">Services</a></li>
+                        <li><a href="insights.html" style="color: #9ca3af !important;" class="hover:text-white transition">Insights</a></li>
+                        <li><a href="contact.html" style="color: #9ca3af !important;" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white !important;" class="font-semibold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i style="color: white !important;" class="fas fa-envelope mr-3 mt-1"></i>
+                            <span style="color: #9ca3af !important;">support@gyzylkum.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i style="color: white !important;" class="fas fa-phone mr-3 mt-1"></i>
+                            <span style="color: #9ca3af !important;">+1 (213) 476-7244</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i style="color: white !important;" class="fas fa-map-marker-alt mr-3 mt-1"></i>
+                            <span style="color: #9ca3af !important;">1312 17TH ST UNIT NUM 2588<br>Denver, CO 80202, USA</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            
-            <!-- Quick links -->
-            <div>
-                <h4 class="text-white font-semibold text-lg mb-4" style="color: white !important;">Company</h4>
-                <ul class="space-y-2">
-                    <li><a href="about.html" class="text-gray-300 hover:text-white transition" style="color: #d1d5db !important;">About Us</a></li>
-                    <li><a href="services.html" class="text-gray-300 hover:text-white transition" style="color: #d1d5db !important;">Services</a></li>
-                    <li><a href="insights.html" class="text-gray-300 hover:text-white transition" style="color: #d1d5db !important;">Insights</a></li>
-                    <li><a href="contact.html" class="text-gray-300 hover:text-white transition" style="color: #d1d5db !important;">Contact</a></li>
-                </ul>
-            </div>
-            
-            <!-- Services -->
-            <div>
-                <h4 class="text-white font-semibold text-lg mb-4" style="color: white !important;">Services</h4>
-                <ul class="space-y-2">
-                    <li><a href="services.html#tech" class="text-gray-300 hover:text-white transition" style="color: #d1d5db !important;">Technology Consulting</a></li>
-                    <li><a href="services.html#trade" class="text-gray-300 hover:text-white transition" style="color: #d1d5db !important;">Cross-Border Trade</a></li>
-                    <li><a href="services.html#security" class="text-gray-300 hover:text-white transition" style="color: #d1d5db !important;">Cybersecurity</a></li>
-                </ul>
-            </div>
-            
-            <!-- Contact -->
-            <div>
-                <h4 class="text-white font-semibold text-lg mb-4" style="color: white !important;">Contact</h4>
-                <ul class="space-y-3">
-                    <li class="flex items-start">
-                        <i class="fas fa-envelope mr-3 mt-1" style="color: white !important;"></i>
-                        <span style="color: #d1d5db !important;">support@gyzylkum.com</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-phone mr-3 mt-1" style="color: white !important;"></i>
-                        <span style="color: #d1d5db !important;">+1 (213) 476-7244</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-map-marker-alt mr-3 mt-1" style="color: white !important;"></i>
-                        <span style="color: #d1d5db !important;">1312 17TH ST UNIT NUM 2588<br>Denver, CO 80202, USA</span>
-                    </li>
-                </ul>
+            <div class="border-t border-gray-800 mt-16 pt-8 text-sm text-center">
+                <p style="color: #6b7280 !important;">&copy; 2026 GYZYL KUM LLC. All rights reserved. ISO 27001 Certified.</p>
             </div>
         </div>
-        
-        <!-- Copyright -->
-        <div class="border-t border-gray-800 mt-16 pt-8 text-sm text-center" style="border-color: #1f2937 !important;">
-            <p style="color: #9ca3af !important;">&copy; 2026 GYZYL KUM LLC. All rights reserved. ISO 27001 Certified.</p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 800, once: true, offset: 100 });
+        
+        // Mobile menu
         document.getElementById('menu-btn').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
