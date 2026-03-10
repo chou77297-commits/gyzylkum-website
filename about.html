@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - GYZYL KUM LLC</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- 导航栏 (直接从 index.html 复制过来) -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-blue-600">GYZYL KUM LLC</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+                    <a href="about.html" class="text-blue-600 font-medium">About</a>
+                    <a href="services.html" class="text-gray-600 hover:text-blue-600 transition">Services</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-500 hover:text-blue-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="index.html" class="block px-4 py-2 text-gray-600 hover:bg-blue-50">Home</a>
+            <a href="about.html" class="block px-4 py-2 text-blue-600 bg-blue-50">About</a>
+            <a href="services.html" class="block px-4 py-2 text-gray-600 hover:bg-blue-50">Services</a>
+            <a href="contact.html" class="block px-4 py-2 text-gray-600 hover:bg-blue-50">Contact</a>
+        </div>
+    </nav>
+
+    <!-- 页面主要内容 - 关于我们 -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h1 class="text-4xl font-bold text-gray-900 mb-8">About Us</h1>
+        
+        <div class="prose prose-lg text-gray-700">
+            <p class="lead text-xl text-gray-600 mb-6">Founded in 2024 and headquartered in Delaware, USA, GYZYL KUM LLC is dedicated to providing high-quality technology consulting, cross-border trade support, and cybersecurity assessment services to businesses worldwide.</p>
+            
+            <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Our Story</h2>
+            <p>The name "GYZYL KUM" comes from the Kazakh language, meaning "precious sand." It represents our philosophy: every partnership is precious, and through meticulous service and resilience, we grow together with our clients.</p>
+            
+            <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Our Team</h2>
+            <p>We bring together experts from technology, finance, and legal sectors, combining international experience with deep industry knowledge to deliver exceptional results.</p>
+            
+            <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Our Values</h2>
+            <ul class="list-disc list-inside">
+                <li><strong>Integrity:</strong> We build trust through honesty and transparency.</li>
+                <li><strong>Innovation:</strong> We embrace new ideas and technologies to solve complex challenges.</li>
+                <li><strong>Excellence:</strong> We strive for the highest quality in everything we do.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 页脚 (直接从 index.html 复制过来) -->
+    <footer class="bg-gray-800 text-gray-300 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">GYZYL KUM LLC</h3>
+                    <p class="text-sm text-gray-400">Professional technology consulting and cross-border trade support services.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-medium mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="services.html#tech" class="hover:text-white transition">Technology Consulting</a></li>
+                        <li><a href="services.html#trade" class="hover:text-white transition">Cross-Border Trade</a></li>
+                        <li><a href="services.html#security" class="hover:text-white transition">Cybersecurity</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-medium mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fas fa-envelope mr-2"></i> info@gyzylkum.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Wilmington, DE, USA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-sm">
+                <p>&copy; 2026 GYZYL KUM LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
