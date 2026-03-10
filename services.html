@@ -1,25 +1,409 @@
-<!-- 页面标题 -->
-<section class="bg-black text-white py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-5xl md:text-6xl font-bold mb-6">Our Services</h1>
-        <p class="text-xl text-gray-300">Comprehensive solutions tailored to your business needs.</p>
-    </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - GYZYL KUM LLC</title>
+    
+    <!-- Styles -->
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 40px -15px rgba(0, 0, 0, 0.2);
+        }
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+            background-color: #2563eb;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
 
-<!-- 服务详情（带锚点） -->
-<section class="py-20 bg-white">
-    <!-- 技术咨询详细 -->
-    <div id="tech" class="scroll-mt-24">
-        <!-- 完整服务描述 -->
-    </div>
-    
-    <!-- 跨境贸易详细 -->
-    <div id="trade" class="scroll-mt-24">
-        <!-- 完整服务描述 -->
-    </div>
-    
-    <!-- 网络安全详细 -->
-    <div id="security" class="scroll-mt-24">
-        <!-- 完整服务描述 -->
-    </div>
-</section>
+    <!-- ======== NAVIGATION (same as about) ======== -->
+    <nav class="bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="text-2xl font-bold">
+                    <span class="gradient-text">GYZYL KUM</span>
+                    <span class="text-gray-600"> LLC</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="px-4 py-2 text-gray-600 hover:text-blue-600 transition font-medium">Home</a>
+                    <a href="about.html" class="px-4 py-2 text-gray-600 hover:text-blue-600 transition font-medium">About</a>
+                    <a href="services.html" class="px-4 py-2 text-blue-600 font-medium border-b-2 border-blue-600">Services</a>
+                    <a href="insights.html" class="px-4 py-2 text-gray-600 hover:text-blue-600 transition font-medium">Insights</a>
+                    <a href="contact.html" class="px-4 py-2 text-gray-600 hover:text-blue-600 transition font-medium">Contact</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="contact.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition shadow-md">Get Consultation</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-500 hover:text-blue-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-3 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-600">Home</a>
+                <a href="about.html" class="block py-2 text-gray-600 hover:text-blue-600">About</a>
+                <a href="services.html" class="block py-2 text-blue-600 font-medium">Services</a>
+                <a href="insights.html" class="block py-2 text-gray-600 hover:text-blue-600">Insights</a>
+                <a href="contact.html" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
+                <div class="pt-2">
+                    <a href="contact.html" class="block text-center bg-blue-600 text-white px-4 py-3 rounded-lg text-sm font-medium">Get Consultation</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======== PAGE HERO WITH HOME BUTTON ======== -->
+    <section class="relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <i class="fas fa-cogs text-9xl absolute top-10 right-10 rotate-12"></i>
+            <i class="fas fa-chart-line text-8xl absolute bottom-10 left-10"></i>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <!-- Breadcrumb navigation -->
+            <div class="flex items-center gap-2 text-sm text-blue-200 mb-4" data-aos="fade-up">
+                <a href="index.html" class="hover:text-white transition flex items-center gap-1">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="text-white">Services</span>
+            </div>
+            
+            <div class="max-w-3xl" data-aos="fade-up" data-aos-delay="100">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Our <span class="text-yellow-300">Services</span></h1>
+                <p class="text-xl text-blue-100 leading-relaxed mb-8">Comprehensive solutions tailored to your business needs, delivered by industry experts.</p>
+                
+                <!-- Home button -->
+                <a href="index.html" class="inline-flex items-center bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg group">
+                    <i class="fas fa-arrow-left mr-2 group-hover:-translate-x-1 transition-transform"></i>
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== SERVICES OVERVIEW ======== -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">What We <span class="gradient-text">Offer</span></h2>
+                <p class="text-xl text-gray-600">End-to-end expertise across three core areas to help you navigate complex challenges and seize global opportunities.</p>
+            </div>
+            
+            <!-- Service Navigation -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16" data-aos="fade-up">
+                <a href="#tech" class="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition">Technology Consulting</a>
+                <a href="#trade" class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition">Cross-Border Trade</a>
+                <a href="#security" class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition">Cybersecurity</a>
+            </div>
+            
+            <!-- Technology Consulting -->
+            <div id="tech" class="scroll-mt-24 mb-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right">
+                        <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-4xl mb-6">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Technology Consulting</h2>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            We help businesses make smart technology decisions. From startups to enterprises, our experts provide unbiased, practical guidance to help you leverage technology for competitive advantage.
+                        </p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                                <div>
+                                    <h4 class="font-bold">Digital Transformation</h4>
+                                    <p class="text-gray-600">Modernize legacy systems and processes to improve efficiency and agility.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                                <div>
+                                    <h4 class="font-bold">Cloud Architecture</h4>
+                                    <p class="text-gray-600">Design and implement scalable, secure cloud solutions on AWS, Azure, or GCP.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                                <div>
+                                    <h4 class="font-bold">Software Development</h4>
+                                    <p class="text-gray-600">Custom software solutions tailored to your unique business requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="contact.html" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition group">
+                            Discuss Your Project
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                    <div class="relative" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Technology Consulting" 
+                             class="rounded-2xl shadow-2xl">
+                        <div class="absolute -bottom-4 -right-4 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
+                            <p class="text-2xl font-bold">10+</p>
+                            <p class="text-sm">Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cross-Border Trade -->
+            <div id="trade" class="scroll-mt-24 mb-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="relative order-2 lg:order-1" data-aos="fade-right">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Cross-Border Trade" 
+                             class="rounded-2xl shadow-2xl">
+                        <div class="absolute -bottom-4 -left-4 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
+                            <p class="text-2xl font-bold">20+</p>
+                            <p class="text-sm">Countries</p>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2" data-aos="fade-left">
+                        <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-4xl mb-6">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Cross-Border Trade</h2>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Expand your business globally with confidence. We provide end-to-end support for international expansion, from regulatory compliance to logistics optimization.
+                        </p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                                <div>
+                                    <h4 class="font-bold">Regulatory Compliance</h4>
+                                    <p class="text-gray-600">Navigate complex international trade laws and customs requirements.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                                <div>
+                                    <h4 class="font-bold">Supply Chain Optimization</h4>
+                                    <p class="text-gray-600">Streamline logistics and reduce costs across your global supply chain.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                                <div>
+                                    <h4 class="font-bold">Payment Integration</h4>
+                                    <p class="text-gray-600">Seamless cross-border payment solutions for international transactions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="contact.html" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition group">
+                            Explore Trade Solutions
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cybersecurity -->
+            <div id="security" class="scroll-mt-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right">
+                        <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-4xl mb-6">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Cybersecurity</h2>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Protect your digital assets with our comprehensive security assessments and protection strategies. We identify vulnerabilities before attackers do.
+                        </p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                                <div>
+                                    <h4 class="font-bold">Security Audits</h4>
+                                    <p class="text-gray-600">Comprehensive assessment of your systems, policies, and procedures.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                                <div>
+                                    <h4 class="font-bold">Penetration Testing</h4>
+                                    <p class="text-gray-600">Simulated attacks to identify vulnerabilities in your infrastructure.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                                <div>
+                                    <h4 class="font-bold">Incident Response</h4>
+                                    <p class="text-gray-600">Rapid response and recovery plans to minimize damage from security breaches.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="contact.html" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition group">
+                            Secure Your Business
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                    <div class="relative" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Cybersecurity" 
+                             class="rounded-2xl shadow-2xl">
+                        <div class="absolute -bottom-4 -right-4 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
+                            <p class="text-2xl font-bold">ISO</p>
+                            <p class="text-sm">27001 Certified</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== WHY CHOOSE US ======== -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-blue-600 font-semibold text-sm tracking-wider uppercase">Why Choose Us</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">The GYZYL KUM Advantage</h2>
+                <p class="text-xl text-gray-600">What sets us apart in a competitive global market.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-3xl mx-auto mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Deep Expertise</h3>
+                    <p class="text-gray-600">Specialized knowledge across technology, trade, and security</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-3xl mx-auto mb-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Client-First</h3>
+                    <p class="text-gray-600">Tailored solutions that prioritize your unique needs</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-3xl mx-auto mb-4">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Global Network</h3>
+                    <p class="text-gray-600">Partners and resources spanning 20+ countries</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-3xl mx-auto mb-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">24/7 Support</h3>
+                    <p class="text-gray-600">Round-the-clock assistance for critical issues</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== CTA SECTION ======== -->
+    <section class="py-20 bg-black text-white">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
+            <p class="text-xl text-gray-300 mb-10">Let's discuss which of our services can best support your business goals.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition shadow-lg">
+                    Schedule Consultation
+                </a>
+                <a href="index.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-black transition flex items-center justify-center gap-2">
+                    <i class="fas fa-home"></i>
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== FOOTER (same as about) ======== -->
+    <footer class="bg-black text-white border-t border-gray-800">
+        <!-- Same footer as about.html -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+                <div class="lg:col-span-2">
+                    <a href="index.html" class="text-2xl font-bold text-white mb-4 inline-block hover:text-blue-400 transition">GYZYL KUM LLC</a>
+                    <p class="text-gray-400 mb-6 max-w-md">Connecting global resources, empowering innovation through expert consulting and solutions.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition transform hover:scale-110"><i class="fab fa-linkedin-in text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition transform hover:scale-110"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition transform hover:scale-110"><i class="fab fa-facebook-f text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="insights.html" class="text-gray-400 hover:text-white transition">Insights</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#tech" class="text-gray-400 hover:text-white transition">Technology Consulting</a></li>
+                        <li><a href="services.html#trade" class="text-gray-400 hover:text-white transition">Cross-Border Trade</a></li>
+                        <li><a href="services.html#security" class="text-gray-400 hover:text-white transition">Cybersecurity</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mr-3 mt-1 text-white"></i>
+                            <span>support@gyzylkum.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mr-3 mt-1 text-white"></i>
+                            <span>+1 (213) 476-7244</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1 text-white"></i>
+                            <span>1312 17TH ST UNIT NUM 2588<br>Denver, CO 80202, USA</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-16 pt-8 text-sm text-center text-gray-500">
+                <p>&copy; 2026 GYZYL KUM LLC. All rights reserved. ISO 27001 Certified.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 100 });
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
