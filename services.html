@@ -33,6 +33,13 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800 antialiased">
@@ -82,220 +89,222 @@
         </div>
     </nav>
 
-     <!-- ======== OPTIMIZED SERVICES HERO SECTION ======== -->
-    <section class="relative min-h-[600px] flex items-center justify-center overflow-hidden">
-        <!-- Premium background image with multiple overlays -->
-        <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
-                 alt="Technology and innovation" 
-                 class="w-full h-full object-cover scale-105 transform transition-transform duration-[20s] hover:scale-100">
-            
-            <!-- Multi-layer gradients for depth -->
-            <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-transparent to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-gray-900/50 via-transparent to-gray-900/50"></div>
-            
-            <!-- Subtle pattern overlay -->
-            <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    <!-- ======== HERO SECTION - MODERN STYLE ======== -->
+    <section class="relative min-h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
+        <!-- Abstract geometric pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
         </div>
         
-        <!-- Animated floating particles -->
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/20 rounded-full filter blur-3xl animate-pulse"></div>
-            <div class="absolute bottom-1/3 right-1/4 w-96 h-96 bg-purple-400/20 rounded-full filter blur-3xl animate-pulse animation-delay-1000"></div>
-            <div class="absolute top-2/3 left-1/2 w-48 h-48 bg-cyan-400/20 rounded-full filter blur-3xl animate-pulse animation-delay-2000"></div>
-        </div>
+        <!-- Floating orbs -->
+        <div class="absolute top-20 right-20 w-72 h-72 bg-blue-400/20 rounded-full filter blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-20 left-20 w-80 h-80 bg-purple-400/20 rounded-full filter blur-3xl animate-pulse animation-delay-1000"></div>
         
-        <!-- Content wrapper -->
-        <div class="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-            <!-- Enhanced breadcrumb navigation -->
-            <div class="flex items-center gap-3 text-sm mb-10" data-aos="fade-down" data-aos-duration="800">
-                <a href="index.html" class="group flex items-center gap-2 bg-white/10 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
-                    <i class="fas fa-home text-blue-300 group-hover:text-white transition-colors text-xs"></i>
-                    <span class="text-white/90 group-hover:text-white font-medium">Home</span>
-                </a>
-                <i class="fas fa-chevron-right text-white/30 text-xs"></i>
-                <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-5 py-2.5 rounded-full font-semibold shadow-xl flex items-center gap-2">
-                    <i class="fas fa-cogs text-xs"></i>
-                    <span>Our Services</span>
+        <!-- Content container -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <!-- Breadcrumb -->
+            <div class="flex justify-center mb-8" data-aos="fade-down">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                    <a href="index.html" class="text-white/70 hover:text-white transition flex items-center gap-1">
+                        <i class="fas fa-home text-xs"></i>
+                        <span>Home</span>
+                    </a>
+                    <i class="fas fa-chevron-right text-white/30 text-xs"></i>
+                    <span class="text-white font-semibold">Services</span>
                 </div>
             </div>
             
-            <!-- Main content grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Left column - Text content -->
-                <div class="text-left" data-aos="fade-right" data-aos-duration="1000">
-                    <!-- Premium badge -->
-                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-amber-500 text-gray-900 px-4 py-2 rounded-full text-sm font-bold shadow-xl mb-6">
-                        <i class="fas fa-star text-xs"></i>
-                        <span>INDUSTRY LEADING SOLUTIONS</span>
-                        <i class="fas fa-star text-xs"></i>
-                    </div>
-                    
-                    <!-- Main headline with cinematic effect -->
-                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
-                        <span class="text-white block">Our</span>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-white to-amber-300 drop-shadow-2xl">Services</span>
-                    </h1>
-                    
-                    <!-- Description card with dark text -->
-                    <div class="mb-8 max-w-xl">
-                        <div class="bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-2xl border-l-4 border-amber-400 transform hover:scale-105 transition-transform duration-300">
-                            <p class="text-lg md:text-xl text-gray-800 font-semibold leading-relaxed">
-                                <i class="fas fa-quote-left text-amber-500 mr-2 opacity-50"></i>
-                                Comprehensive solutions tailored to your business needs, delivered by industry experts with decades of combined experience.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Key metrics/stats -->
-                    <div class="grid grid-cols-3 gap-4 mb-8 max-w-md">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-white">50+</div>
-                            <div class="text-xs text-blue-200">Experts</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-white">500+</div>
-                            <div class="text-xs text-blue-200">Projects</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-white">98%</div>
-                            <div class="text-xs text-blue-200">Success Rate</div>
-                        </div>
-                    </div>
-                    
-                    <!-- CTA buttons -->
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#services" class="group relative inline-flex items-center gap-3 bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-amber-400 hover:text-blue-900 transition-all duration-300 shadow-2xl hover:shadow-xl transform hover:-translate-y-1 overflow-hidden">
-                            <span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
-                            <span class="relative z-10">Explore Services</span>
-                            <i class="fas fa-arrow-down group-hover:translate-y-1 transition-transform relative z-10"></i>
-                        </a>
-                        <a href="contact.html" class="group inline-flex items-center gap-3 bg-transparent border-2 border-white/40 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-600 hover:border-white transition-all duration-300 backdrop-blur-sm">
-                            <span>Contact Us</span>
-                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                    </div>
-                </div>
+            <!-- Main title -->
+            <div class="text-center max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+                    Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">Services</span>
+                </h1>
+                <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                    Comprehensive solutions tailored to your business needs, delivered by industry experts with decades of combined experience.
+                </p>
                 
-                <!-- Right column - Service cards visual -->
-                <div class="hidden lg:block relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <!-- Floating service cards -->
-                    <div class="grid grid-cols-2 gap-4">
-                        <!-- Card 1 -->
-                        <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/20 shadow-xl transform rotate-3 hover:rotate-0 transition-all duration-500 hover:bg-white/20">
-                            <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mb-3">
-                                <i class="fas fa-laptop-code text-white text-xl"></i>
-                            </div>
-                            <h3 class="text-white font-bold">Technology</h3>
-                            <p class="text-blue-200 text-sm">Consulting</p>
-                        </div>
-                        
-                        <!-- Card 2 -->
-                        <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/20 shadow-xl transform -rotate-2 hover:rotate-0 transition-all duration-500 hover:bg-white/20 mt-8">
-                            <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mb-3">
-                                <i class="fas fa-globe text-white text-xl"></i>
-                            </div>
-                            <h3 class="text-white font-bold">Cross-Border</h3>
-                            <p class="text-blue-200 text-sm">Trade</p>
-                        </div>
-                        
-                        <!-- Card 3 -->
-                        <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/20 shadow-xl transform rotate-6 hover:rotate-0 transition-all duration-500 hover:bg-white/20 col-span-2 -ml-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center mb-3">
-                                <i class="fas fa-shield-alt text-white text-xl"></i>
-                            </div>
-                            <h3 class="text-white font-bold">Cybersecurity</h3>
-                            <p class="text-blue-200 text-sm">Assessment & Protection</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Floating decorative elements -->
-                    <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-500/20 rounded-full filter blur-2xl animate-float"></div>
-                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-purple-500/20 rounded-full filter blur-2xl animate-float animation-delay-2000"></div>
+                <!-- CTA buttons -->
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="#services-list" class="group inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <span>Explore All Services</span>
+                        <i class="fas fa-arrow-down group-hover:translate-y-1 transition-transform"></i>
+                    </a>
+                    <a href="contact.html" class="group inline-flex items-center gap-2 bg-transparent border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 hover:border-white transition-all duration-300">
+                        <span>Contact Us</span>
+                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
                 </div>
             </div>
         </div>
         
-        <!-- Enhanced scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-            <div class="flex flex-col items-center gap-2">
-                <span class="text-white/60 text-xs uppercase tracking-wider">Scroll</span>
-                <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center backdrop-blur-sm">
-                    <div class="w-1.5 h-3 bg-gradient-to-b from-white to-blue-300 rounded-full mt-2 animate-bounce"></div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Bottom wave divider -->
-        <div class="absolute bottom-0 left-0 right-0 z-10 leading-none">
+        <!-- Bottom wave -->
+        <div class="absolute bottom-0 left-0 right-0">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" class="w-full h-auto" preserveAspectRatio="none">
                 <path fill="#ffffff" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
             </svg>
         </div>
     </section>
 
-    <!-- Custom animations -->
-    <style>
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-        .animation-delay-1000 {
-            animation-delay: 1s;
-        }
-        .animation-delay-2000 {
-            animation-delay: 2s;
-        }
-    </style>
-
     <!-- ======== SERVICES OVERVIEW ======== -->
-    <section class="py-24 bg-white">
+    <section id="services-list" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section header -->
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">What We <span class="gradient-text">Offer</span></h2>
+                <span class="text-blue-600 font-semibold text-sm tracking-wider uppercase">What We Offer</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">Expert Solutions for <span class="gradient-text">Modern Business</span></h2>
                 <p class="text-xl text-gray-600">End-to-end expertise across three core areas to help you navigate complex challenges and seize global opportunities.</p>
             </div>
             
-            <!-- Service Navigation -->
-            <div class="flex flex-wrap justify-center gap-4 mb-16" data-aos="fade-up">
-                <a href="#tech" class="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition shadow-md">Technology Consulting</a>
-                <a href="#trade" class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition">Cross-Border Trade</a>
-                <a href="#security" class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition">Cybersecurity</a>
+            <!-- Service cards grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Technology Consulting -->
+                <div class="service-card bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                        <div class="absolute -right-8 -top-8 w-24 h-24 bg-white/20 rounded-full"></div>
+                        <div class="absolute -left-8 -bottom-8 w-32 h-32 bg-white/10 rounded-full"></div>
+                        <div class="relative z-10 h-full flex items-center justify-center">
+                            <i class="fas fa-laptop-code text-7xl text-white opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors">Technology Consulting</h3>
+                        <p class="text-gray-600 mb-4">Strategic technology guidance from architecture design to implementation, helping you make informed decisions and reduce risks.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                Digital Transformation
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                Cloud Architecture
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                Software Development
+                            </li>
+                        </ul>
+                        <a href="#tech" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 group/link">
+                            Learn more 
+                            <i class="fas fa-arrow-right ml-2 group-hover/link:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cross-Border Trade -->
+                <div class="service-card bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                        <div class="absolute -right-8 -top-8 w-24 h-24 bg-white/20 rounded-full"></div>
+                        <div class="absolute -left-8 -bottom-8 w-32 h-32 bg-white/10 rounded-full"></div>
+                        <div class="relative z-10 h-full flex items-center justify-center">
+                            <i class="fas fa-globe text-7xl text-white opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 group-hover:text-green-600 transition-colors">Cross-Border Trade</h3>
+                        <p class="text-gray-600 mb-4">End-to-end support for international expansion, including compliance, logistics, and payment integration.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Regulatory Compliance
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Supply Chain Optimization
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Payment Integration
+                            </li>
+                        </ul>
+                        <a href="#trade" class="inline-flex items-center text-green-600 font-semibold hover:text-green-800 group/link">
+                            Learn more 
+                            <i class="fas fa-arrow-right ml-2 group-hover/link:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity -->
+                <div class="service-card bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                        <div class="absolute -right-8 -top-8 w-24 h-24 bg-white/20 rounded-full"></div>
+                        <div class="absolute -left-8 -bottom-8 w-32 h-32 bg-white/10 rounded-full"></div>
+                        <div class="relative z-10 h-full flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-7xl text-white opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 group-hover:text-purple-600 transition-colors">Cybersecurity</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive security assessments and protection strategies to safeguard your digital assets.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check-circle text-purple-500 mr-2"></i>
+                                Security Audits
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check-circle text-purple-500 mr-2"></i>
+                                Penetration Testing
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check-circle text-purple-500 mr-2"></i>
+                                Incident Response
+                            </li>
+                        </ul>
+                        <a href="#security" class="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 group/link">
+                            Learn more 
+                            <i class="fas fa-arrow-right ml-2 group-hover/link:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            
-            <!-- Technology Consulting -->
+        </div>
+    </section>
+
+    <!-- ======== DETAILED SERVICES ======== -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Technology Consulting Detail -->
             <div id="tech" class="scroll-mt-24 mb-24">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div data-aos="fade-right">
-                        <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-4xl mb-6">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Technology Consulting</h2>
+                        <span class="text-blue-600 font-semibold text-sm tracking-wider uppercase">Technology Consulting</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">Transform Your Business with <span class="gradient-text">Technology</span></h2>
                         <p class="text-lg text-gray-600 mb-6 leading-relaxed">
                             We help businesses make smart technology decisions. From startups to enterprises, our experts provide unbiased, practical guidance to help you leverage technology for competitive advantage.
                         </p>
                         
                         <div class="space-y-4 mb-8">
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                            <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 flex-shrink-0">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
                                 <div>
                                     <h4 class="font-bold">Digital Transformation</h4>
                                     <p class="text-gray-600">Modernize legacy systems and processes to improve efficiency and agility.</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                            <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 flex-shrink-0">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
                                 <div>
                                     <h4 class="font-bold">Cloud Architecture</h4>
                                     <p class="text-gray-600">Design and implement scalable, secure cloud solutions on AWS, Azure, or GCP.</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                            <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 flex-shrink-0">
+                                    <i class="fas fa-code"></i>
+                                </div>
                                 <div>
                                     <h4 class="font-bold">Software Development</h4>
                                     <p class="text-gray-600">Custom software solutions tailored to your unique business requirements.</p>
@@ -303,7 +312,7 @@
                             </div>
                         </div>
                         
-                        <a href="contact.html" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition group">
+                        <a href="contact.html" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition shadow-lg group">
                             Discuss Your Project
                             <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                         </a>
@@ -312,7 +321,7 @@
                         <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Technology Consulting" 
                              class="rounded-2xl shadow-2xl w-full hover-lift">
-                        <div class="absolute -bottom-4 -right-4 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
+                        <div class="absolute -bottom-4 -right-4 bg-blue-600 text-white p-4 rounded-lg shadow-lg animate-float">
                             <p class="text-2xl font-bold">10+</p>
                             <p class="text-sm">Years Experience</p>
                         </div>
@@ -320,44 +329,48 @@
                 </div>
             </div>
             
-            <!-- Cross-Border Trade -->
+            <!-- Cross-Border Trade Detail -->
             <div id="trade" class="scroll-mt-24 mb-24">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div class="relative order-2 lg:order-1" data-aos="fade-right">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Cross-Border Trade" 
                              class="rounded-2xl shadow-2xl w-full hover-lift">
-                        <div class="absolute -bottom-4 -left-4 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
+                        <div class="absolute -bottom-4 -left-4 bg-green-600 text-white p-4 rounded-lg shadow-lg animate-float">
                             <p class="text-2xl font-bold">20+</p>
                             <p class="text-sm">Countries</p>
                         </div>
                     </div>
                     <div class="order-1 lg:order-2" data-aos="fade-left">
-                        <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-4xl mb-6">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Cross-Border Trade</h2>
+                        <span class="text-green-600 font-semibold text-sm tracking-wider uppercase">Cross-Border Trade</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">Expand Your Business <span class="text-green-600">Globally</span></h2>
                         <p class="text-lg text-gray-600 mb-6 leading-relaxed">
                             Expand your business globally with confidence. We provide end-to-end support for international expansion, from regulatory compliance to logistics optimization.
                         </p>
                         
                         <div class="space-y-4 mb-8">
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                            <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                                <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600 flex-shrink-0">
+                                    <i class="fas fa-gavel"></i>
+                                </div>
                                 <div>
                                     <h4 class="font-bold">Regulatory Compliance</h4>
                                     <p class="text-gray-600">Navigate complex international trade laws and customs requirements.</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                            <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                                <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600 flex-shrink-0">
+                                    <i class="fas fa-truck"></i>
+                                </div>
                                 <div>
                                     <h4 class="font-bold">Supply Chain Optimization</h4>
                                     <p class="text-gray-600">Streamline logistics and reduce costs across your global supply chain.</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                            <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                                <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600 flex-shrink-0">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
                                 <div>
                                     <h4 class="font-bold">Payment Integration</h4>
                                     <p class="text-gray-600">Seamless cross-border payment solutions for international transactions.</p>
@@ -365,7 +378,7 @@
                             </div>
                         </div>
                         
-                        <a href="contact.html" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition group">
+                        <a href="contact.html" class="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition shadow-lg group">
                             Explore Trade Solutions
                             <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                         </a>
@@ -373,35 +386,39 @@
                 </div>
             </div>
             
-            <!-- Cybersecurity -->
+            <!-- Cybersecurity Detail -->
             <div id="security" class="scroll-mt-24">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div data-aos="fade-right">
-                        <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-4xl mb-6">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Cybersecurity</h2>
+                        <span class="text-purple-600 font-semibold text-sm tracking-wider uppercase">Cybersecurity</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">Protect Your Digital <span class="text-purple-600">Assets</span></h2>
                         <p class="text-lg text-gray-600 mb-6 leading-relaxed">
                             Protect your digital assets with our comprehensive security assessments and protection strategies. We identify vulnerabilities before attackers do.
                         </p>
                         
                         <div class="space-y-4 mb-8">
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                            <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                                <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 flex-shrink-0">
+                                    <i class="fas fa-search"></i>
+                                </div>
                                 <div>
                                     <h4 class="font-bold">Security Audits</h4>
                                     <p class="text-gray-600">Comprehensive assessment of your systems, policies, and procedures.</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                            <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                                <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 flex-shrink-0">
+                                    <i class="fas fa-bug"></i>
+                                </div>
                                 <div>
                                     <h4 class="font-bold">Penetration Testing</h4>
                                     <p class="text-gray-600">Simulated attacks to identify vulnerabilities in your infrastructure.</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0 mt-1">✓</div>
+                            <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                                <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 flex-shrink-0">
+                                    <i class="fas fa-clock"></i>
+                                </div>
                                 <div>
                                     <h4 class="font-bold">Incident Response</h4>
                                     <p class="text-gray-600">Rapid response and recovery plans to minimize damage from security breaches.</p>
@@ -409,7 +426,7 @@
                             </div>
                         </div>
                         
-                        <a href="contact.html" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition group">
+                        <a href="contact.html" class="inline-flex items-center bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition shadow-lg group">
                             Secure Your Business
                             <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                         </a>
@@ -418,7 +435,7 @@
                         <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Cybersecurity" 
                              class="rounded-2xl shadow-2xl w-full hover-lift">
-                        <div class="absolute -bottom-4 -right-4 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
+                        <div class="absolute -bottom-4 -right-4 bg-purple-600 text-white p-4 rounded-lg shadow-lg animate-float">
                             <p class="text-2xl font-bold">ISO</p>
                             <p class="text-sm">27001 Certified</p>
                         </div>
@@ -429,37 +446,37 @@
     </section>
 
     <!-- ======== WHY CHOOSE US ======== -->
-    <section class="py-24 bg-gray-50">
+    <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
                 <span class="text-blue-600 font-semibold text-sm tracking-wider uppercase">Why Choose Us</span>
-                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">The GYZYL KUM Advantage</h2>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">The <span class="gradient-text">GYZYL KUM</span> Advantage</h2>
                 <p class="text-xl text-gray-600">What sets us apart in a competitive global market.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center p-6 bg-gray-50 rounded-xl hover:shadow-xl transition hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-3xl mx-auto mb-4">
                         <i class="fas fa-brain"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Deep Expertise</h3>
                     <p class="text-gray-600">Specialized knowledge across technology, trade, and security</p>
                 </div>
-                <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center p-6 bg-gray-50 rounded-xl hover:shadow-xl transition hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-3xl mx-auto mb-4">
                         <i class="fas fa-handshake"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Client-First</h3>
                     <p class="text-gray-600">Tailored solutions that prioritize your unique needs</p>
                 </div>
-                <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center p-6 bg-gray-50 rounded-xl hover:shadow-xl transition hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
                     <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-3xl mx-auto mb-4">
                         <i class="fas fa-globe-americas"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Global Network</h3>
                     <p class="text-gray-600">Partners and resources spanning 20+ countries</p>
                 </div>
-                <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition hover:-translate-y-1" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-center p-6 bg-gray-50 rounded-xl hover:shadow-xl transition hover:-translate-y-1" data-aos="fade-up" data-aos-delay="400">
                     <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-3xl mx-auto mb-4">
                         <i class="fas fa-clock"></i>
                     </div>
@@ -470,18 +487,18 @@
         </div>
     </section>
 
-    <!-- ======== CTA SECTION - BLACK BACKGROUND ======== -->
+    <!-- ======== CTA SECTION - BLACK BACKGROUND (PRESERVED) ======== -->
     <section style="background-color: #000000 !important;" class="py-20 text-white">
         <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8" data-aos="fade-up">
             <h2 style="color: white !important;" class="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
             <p style="color: #d1d5db !important;" class="text-xl mb-10">Let's discuss which of our services can best support your business goals.</p>
             <a href="contact.html" style="background-color: #2563eb !important; color: white !important;" class="inline-block px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition shadow-lg">
-                Schedule Consultation
+                Schedule Free Consultation
             </a>
         </div>
     </section>
 
-    <!-- ======== FOOTER - BLACK BACKGROUND ======== -->
+    <!-- ======== FOOTER - BLACK BACKGROUND (PRESERVED) ======== -->
     <footer style="background-color: #000000 !important;" class="text-white border-t border-gray-800">
         <div style="background-color: #000000 !important;" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
