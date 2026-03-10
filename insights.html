@@ -131,78 +131,59 @@
         </div>
     </section>
 
-    <!-- ======== FEATURED ARTICLE - FIXED ======== -->
-    <section id="articles" class="py-20 bg-white">
+    <!-- ======== FEATURED ARTICLE ======== -->
+    <section id="articles" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section header -->
-            <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
-                <span class="text-blue-600 font-semibold text-sm tracking-wider uppercase">Editor's Pick</span>
-                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">Featured <span class="gradient-text">Article</span></h2>
-                <p class="text-xl text-gray-600">Our latest insights on the most pressing topics in global business.</p>
+            <!-- Section title -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Featured <span class="text-blue-600">Article</span></h2>
+                <p class="text-lg text-gray-600 mt-2">Our latest insights on global business</p>
             </div>
             
-            <!-- Featured article card -->
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100" data-aos="fade-up" data-aos-delay="100">
-                <div class="grid grid-cols-1 lg:grid-cols-2">
-                    <!-- Image section -->
-                    <div class="relative h-64 lg:h-full overflow-hidden">
+            <!-- Article Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                <div class="md:flex">
+                    <!-- Image -->
+                    <div class="md:w-2/5">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Global Trade" 
-                             class="w-full h-full object-cover">
-                        <div class="absolute top-4 left-4">
-                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Trade & Economics</span>
-                        </div>
+                             class="w-full h-64 md:h-full object-cover">
                     </div>
                     
-                    <!-- Content section -->
-                    <div class="p-8 lg:p-10">
-                        <!-- Author and date -->
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center gap-3">
-                                <img src="https://randomuser.me/api/portraits/women/44.jpg" 
-                                     alt="Sarah Chen" 
-                                     class="w-10 h-10 rounded-full">
-                                <div>
-                                    <p class="font-semibold">Sarah Chen</p>
-                                    <p class="text-sm text-gray-500">Head of Trade Services</p>
-                                </div>
-                            </div>
-                            <span class="text-sm text-gray-400 flex items-center gap-1">
-                                <i class="far fa-clock"></i>
-                                5 min read
-                            </span>
-                        </div>
+                    <!-- Content -->
+                    <div class="md:w-3/5 p-8">
+                        <!-- Category -->
+                        <span class="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-sm font-semibold rounded-full mb-4">
+                            Trade & Economics
+                        </span>
                         
                         <!-- Title -->
-                        <h3 class="text-2xl lg:text-3xl font-bold mb-4 leading-tight">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
                             The Future of Cross-Border Trade in 2026
                         </h3>
                         
                         <!-- Description -->
-                        <p class="text-gray-600 mb-6">
-                            New regulations, digital transformation, and emerging markets are reshaping global trade. Our experts break down what you need to know to stay competitive in an increasingly complex international landscape.
+                        <p class="text-gray-600 mb-4">
+                            New regulations, digital transformation, and emerging markets are reshaping global trade. Our experts break down what you need to know to stay competitive.
                         </p>
                         
-                        <!-- Key points grid -->
-                        <div class="grid grid-cols-3 gap-4 mb-6">
-                            <div class="text-center p-3 bg-gray-50 rounded-lg">
-                                <div class="text-blue-600 font-bold text-sm">Market</div>
-                                <div class="text-xs text-gray-500">Trends 2026</div>
-                            </div>
-                            <div class="text-center p-3 bg-gray-50 rounded-lg">
-                                <div class="text-green-600 font-bold text-sm">Regulations</div>
-                                <div class="text-xs text-gray-500">New Policies</div>
-                            </div>
-                            <div class="text-center p-3 bg-gray-50 rounded-lg">
-                                <div class="text-purple-600 font-bold text-sm">Markets</div>
-                                <div class="text-xs text-gray-500">APAC Focus</div>
+                        <!-- Author -->
+                        <div class="flex items-center gap-3 mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" 
+                                 alt="Sarah Chen" 
+                                 class="w-10 h-10 rounded-full">
+                            <div>
+                                <p class="font-semibold text-gray-900">Sarah Chen</p>
+                                <p class="text-sm text-gray-500">Head of Trade Services · 5 min read</p>
                             </div>
                         </div>
                         
-                        <!-- Read more link -->
-                        <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors">
-                            Read full article
-                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        <!-- Read more -->
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
+                            Read Article
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
                         </a>
                     </div>
                 </div>
