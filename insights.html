@@ -383,20 +383,25 @@
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Stay Updated</h2>
                 <p class="text-xl text-gray-600 mb-10">Subscribe to our newsletter for the latest insights and industry news.</p>
                 
-                <!-- 简化表单结构 -->
-                <div class="flex justify-center">
+                <!-- 表单 - 使用 Formspree 处理提交 -->
+                <form action="https://formspree.io/f/mvgoknwr" method="POST" class="flex justify-center">
                     <div class="flex flex-col sm:flex-row gap-4 w-full max-w-xl mx-auto">
                         <input type="email" 
+                               name="email"
                                placeholder="Your email address" 
-                               class="flex-1 px-6 py-4 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent">
+                               required
+                               class="flex-1 px-6 py-4 border-2 border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent">
                         
                         <button type="submit" 
-                                class="bg-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition shadow-lg whitespace-nowrap"
-                                onclick="alert('Thank you for subscribing! This is a demo form.'); return false;">
+                                class="bg-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition shadow-lg whitespace-nowrap">
                             Subscribe
                         </button>
                     </div>
-                </div>
+                    
+                    <!-- 隐藏字段，用于标识表单来源 -->
+                    <input type="hidden" name="_subject" value="New Newsletter Subscription">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
                 
                 <p class="text-sm text-gray-500 mt-6 flex items-center justify-center gap-2">
                     <i class="fas fa-shield-alt text-gray-400"></i>
