@@ -378,30 +378,31 @@
 
     <!-- ======== NEWSLETTER SECTION ======== -->
     <section class="py-20 bg-white border-y border-gray-200">
-        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Stay Updated</h2>
-            <p class="text-xl text-gray-600 mb-10">Subscribe to our newsletter for the latest insights and industry news.</p>
-            
-            <!-- 表单 - 使用 grid 布局强制居中 -->
-            <div class="grid grid-cols-1 justify-items-center w-full">
-                <div class="flex flex-col sm:flex-row gap-4 w-full max-w-2xl">
-                    <input type="email" 
-                           placeholder="Your email address" 
-                           class="flex-1 px-6 py-4 border-2 border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
-                           style="min-width: 200px;">
-                    
-                    <button type="submit" 
-                            class="bg-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition shadow-lg whitespace-nowrap cursor-pointer"
-                            style="background-color: #000000 !important; color: white !important; border: none;">
-                        Subscribe
-                    </button>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Stay Updated</h2>
+                <p class="text-xl text-gray-600 mb-10">Subscribe to our newsletter for the latest insights and industry news.</p>
+                
+                <!-- 简化表单结构 -->
+                <div class="flex justify-center">
+                    <div class="flex flex-col sm:flex-row gap-4 w-full max-w-xl mx-auto">
+                        <input type="email" 
+                               placeholder="Your email address" 
+                               class="flex-1 px-6 py-4 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent">
+                        
+                        <button type="submit" 
+                                class="bg-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition shadow-lg whitespace-nowrap"
+                                onclick="alert('Thank you for subscribing! This is a demo form.'); return false;">
+                            Subscribe
+                        </button>
+                    </div>
                 </div>
+                
+                <p class="text-sm text-gray-500 mt-6 flex items-center justify-center gap-2">
+                    <i class="fas fa-shield-alt text-gray-400"></i>
+                    We respect your privacy. Unsubscribe anytime.
+                </p>
             </div>
-            
-            <p class="text-sm text-gray-500 mt-6 flex items-center justify-center gap-2">
-                <i class="fas fa-shield-alt text-gray-400"></i>
-                We respect your privacy. Unsubscribe anytime.
-            </p>
         </div>
     </section>
 
