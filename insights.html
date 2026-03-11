@@ -383,9 +383,10 @@
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Stay Updated</h2>
                 <p class="text-xl text-gray-600 mb-10">Subscribe to our newsletter for the latest insights and industry news.</p>
                 
-                <!-- 表单 - 简化结构，确保按钮显示 -->
-                <div class="flex justify-center">
-                    <form action="https://formspree.io/f/mvgoknwr" method="POST" class="w-full max-w-xl">
+                <!-- 表单 - 输入框和按钮在隐私声明正上方 -->
+                <div class="flex flex-col items-center">
+                    <!-- 表单区域 -->
+                    <form action="https://formspree.io/f/mvgoknwr" method="POST" class="w-full max-w-xl mb-6">
                         <div class="flex flex-col sm:flex-row gap-4">
                             <input type="email" 
                                    name="email"
@@ -402,12 +403,13 @@
                         <input type="hidden" name="_subject" value="New Newsletter Subscription">
                         <input type="hidden" name="_captcha" value="false">
                     </form>
+                    
+                    <!-- 隐私声明 - 直接在表单下方 -->
+                    <p class="text-sm text-gray-500 flex items-center justify-center gap-2">
+                        <i class="fas fa-shield-alt text-gray-400"></i>
+                        We respect your privacy. Unsubscribe anytime.
+                    </p>
                 </div>
-                
-                <p class="text-sm text-gray-500 mt-6 flex items-center justify-center gap-2">
-                    <i class="fas fa-shield-alt text-gray-400"></i>
-                    We respect your privacy. Unsubscribe anytime.
-                </p>
             </div>
         </div>
     </section>
