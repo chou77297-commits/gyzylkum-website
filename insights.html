@@ -376,23 +376,23 @@
         </div>
     </section>
 
-     <!-- ======== NEWSLETTER SECTION ======== -->
+    <!-- ======== NEWSLETTER SECTION ======== -->
     <section class="py-20 bg-white border-y border-gray-200">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Stay Updated</h2>
             <p class="text-xl text-gray-600 mb-8">Subscribe to our newsletter for the latest insights and industry news.</p>
             
-            <!-- 简化表单结构 -->
+            <!-- 表单结构 -->
             <form action="https://formspree.io/f/mvgoknwr" method="POST" class="max-w-xl mx-auto">
                 <div class="flex flex-col sm:flex-row gap-3">
                     <input type="email" 
                            name="email"
                            placeholder="Your email address" 
                            required
-                           class="flex-1 px-4 py-3 border border-gray-300 rounded-lg text-gray-900">
+                           class="flex-1 px-4 py-3 border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent">
                     
                     <button type="submit" 
-                            class="bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
+                            class="bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition shadow-lg whitespace-nowrap">
                         Subscribe
                     </button>
                 </div>
@@ -400,8 +400,8 @@
                 <input type="hidden" name="_captcha" value="false">
             </form>
             
-            <p class="text-sm text-gray-500 mt-4">
-                <i class="fas fa-shield-alt text-gray-400 mr-1"></i>
+            <p class="text-sm text-gray-500 mt-4 flex items-center justify-center gap-2">
+                <i class="fas fa-shield-alt text-gray-400"></i>
                 We respect your privacy. Unsubscribe anytime.
             </p>
         </div>
